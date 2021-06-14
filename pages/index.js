@@ -1,9 +1,13 @@
-import styles from '../styles/Home.module.css'
-
-export default function Home() {
+import { getFeaturedEvents } from "../dummy";
+import EventList from "../components/events/event-list";
+const HomePage = () => {
+  const featuredEvents = getFeaturedEvents();
+  console.log(featuredEvents);
   return (
-    <div className={styles.container}>
-      <h1>Hello Next World!</h1>
+    <div>
+      <h1>The Home Page</h1>
+      <EventList events={featuredEvents} />
     </div>
-  )
-}
+  );
+};
+export default HomePage;
