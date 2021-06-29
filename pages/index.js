@@ -1,13 +1,10 @@
-import { getFeaturedEvents } from "../dummy";
-import EventList from "../components/events/event-list";
-const HomePage = () => {
-  const featuredEvents = getFeaturedEvents();
-  console.log(featuredEvents);
+const HomePage = (props) => {
   return (
-    <div>
-      <h1>The Home Page</h1>
-      <EventList events={featuredEvents} />
-    </div>
+    <ul>
+      <li>Product 1</li>
+      <li>Product 2</li>
+      <li>Product 3</li>
+    </ul>
   );
 };
 export default HomePage;
